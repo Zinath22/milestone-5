@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/507ed1c05c.js" crossorigin="anonymous"></script>
+    <title>Add Emoji</title>
+</head>
+
+<body>
+    <header class="flex flex-col items-center justify-center">
+        <h1
+            class="text-5xl text-center text-white shadow-lg shadow-purple-400 font-bold mt-6  p-5  rounded-lg  bg-purple-500">
+            This is add emoji</h1>
+    </header>
+    <main>
+        <!-- fruit section -->
+        <section
+            class="mt-10 mx-[620px] flex flex-col items-center justify-center bg-red-400 p-10 rounded-lg shadow-red-300 shadow-lg text-white text-2xl font-bold">
+            <ul class="" id="fruit-list">
+                <li>Apple &#x1F34E;</li>
+                <li>Banana &#x1F34C;</li>
+                <li>Orange &#x1F34A;</li>
+                <li>Guava &#x1F348;</li>
+                <!-- button -->
+            </ul>
+            <button class="bg-blue-300 px-6 py-2 mt-6 rounded-lg shadow-lg hover:bg-blue-600" id="btn-add">Add
+                Fruit</button>
+        </section>
+
+
+        <!-- form section -->
+        <section
+            class="mt-10 flex flex-row gap-3 justify-center items-center mx-[560px] p-2 rounded-lg shadow-lg shadow-gray-400">
+            <input type="password" name="" id="password-field" placeholder="type your password"
+                class="  outline-none  text-black text-2xl font-bold">
+            <button class="" id="eye-hide"><i class="fa-solid fa-eye-slash text-3xl"
+                    style="color:darkslategrey;"></i></button>
+        </section>
+    </main>
+
+
+
+    <script>
+        // add fruit part
+        document.getElementById('btn-add').addEventListener('click', function (event) {
+            const fruitList = document.getElementById('fruit-list');
+            const li = document.createElement('li');
+            li.innerHTML = Grapes &#x1F347;;
+            fruitList.appendChild(li);
+        })
+        // form part
+        document.getElementById('eye-hide').addEventListener('click', function (event) {
+            const eyeHide = document.getElementById('eye-hide');
+
+            const passwordField = document.getElementById('password-field');
+            if (passwordField.type == 'password') {
+                passwordField.setAttribute('type', 'text');
+                eyeHide.innerHTML = <i class="fa-solid fa-eye text-3xl" style="color:darkslategrey;">
+
+
+            }
+            else {
+                eyeHide.innerHTML = <i class="fa-solid fa-eye-slash text-3xl" style="color:darkslategrey;">
+                passwordField.setAttribute('type', 'password');
+            }
+
+        })
+    </script>
+
+
+</body>
+
+</html>
